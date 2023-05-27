@@ -1,11 +1,9 @@
-import { ButtonHTMLAttributes } from 'react';
-
-interface IButton extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary';
-  label?: string;
-}
-
-const Button: React.FC<IButton> = ({ variant, className, label, ...rest }) => {
+const Button: React.FC<componentsProps.IButton> = ({
+  variant,
+  className,
+  label,
+  ...rest
+}) => {
   const defaultStyles = `
     h-[3rem]
     flex justify-center items-center

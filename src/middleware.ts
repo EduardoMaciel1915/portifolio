@@ -17,6 +17,9 @@ export function middleware(request: NextRequest) {
       case 'pt-BR':
         response.cookies.set('language', 'pt-BR');
         break;
+      default:
+        response.cookies.set('language', 'pt-BR');
+        break;
     }
   }
 

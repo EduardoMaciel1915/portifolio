@@ -1,6 +1,12 @@
 {
-  "extends": ["next", "next/core-web-vitals"],
-  "plugins": ["sort-exports"],
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "plugin:storybook/recommended"
+  ],
+  "plugins": [
+    "sort-exports"
+  ],
   "rules": {
     "no-unused-vars": [
       2,
@@ -15,7 +21,10 @@
     "import/prefer-default-export": "off",
     "no-await-in-loop": "error",
     "no-duplicate-imports": "error",
-    "complexity": ["error", 12],
+    "complexity": [
+      "error",
+      12
+    ],
     "consistent-return": "error",
     "switch-colon-spacing": [
       2,
@@ -35,9 +44,16 @@
     "no-console": [
       "warn",
       {
-        "allow": ["warn"]
+        "allow": [
+          "warn"
+        ]
       }
     ],
-    "sort-exports/sort-exports": ["warn", { "sortDir": "asc" }]
+    "sort-exports/sort-exports": [
+      "warn",
+      {
+        "sortDir": "asc"
+      }
+    ]
   }
 }

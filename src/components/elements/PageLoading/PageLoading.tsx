@@ -1,6 +1,4 @@
-import { IcPageLoading } from '../icons';
-import { RenderCondition } from '../noVisual';
-import Flex from './Flex';
+import { RenderCondition, IcPageLoading, Flex } from '@/components';
 
 interface PropsPageLoading {
   loading?: boolean;
