@@ -5,6 +5,7 @@ import { Flex, Button, Box, MenuButton } from '@/components';
 import { handleLanguage, handleTheme } from '@/functions';
 import { useSelectTextLanguageClient } from '@/hooks';
 import { enNavbarText, ptNavbarText } from '@/i18n';
+import { useState } from 'react';
 
 interface PropsNavbar {
   theme: string;
@@ -12,7 +13,18 @@ interface PropsNavbar {
 }
 
 const Navbar = ({ theme, language }: PropsNavbar) => {
+  const [hasBorder, setHasBorder] = useState<boolean>(false);
   const text = useSelectTextLanguageClient(enNavbarText, ptNavbarText, language);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+      setHasBorder(true);
+    } else {
+      setHasBorder(false);
+    }
+  };
+
+  window.addEventListener('scroll', changeBackground);
 
   return (
     <Flex
@@ -20,11 +32,11 @@ const Navbar = ({ theme, language }: PropsNavbar) => {
         w-full h-16
         justify-around items-center 
         text-black
-        border-b border-solid border-gray-300
+        ${hasBorder && 'border-b'} border-solid border-gray-100 dark:border-gray-700
         z-30 
-        transition duration-300 ease-in-out 
-        shadow-inner translateZ-0 
-        backdrop-filter backdrop-saturate-180 backdrop-blur-5 
+        transition-all ease-in-out 
+        shadow-inner
+        backdrop-filter backdrop-saturate-150 backdrop-blur-sm 
         bg-opacity-80 bg-white dark:bg-black
         sticky
         top-0
