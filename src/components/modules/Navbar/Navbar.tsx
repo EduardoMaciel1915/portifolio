@@ -1,6 +1,6 @@
 'use client';
 
-import { Flex, Button } from '@/components';
+import { Flex, Button, Box, MenuButton } from '@/components';
 
 import { handleLanguage, handleTheme } from '@/functions';
 import { useSelectTextLanguageClient } from '@/hooks';
@@ -35,7 +35,7 @@ const Navbar = ({ theme, language }: PropsNavbar) => {
         <Button variant="secondary" label={language} onClick={() => handleLanguage()} />
       </Flex>
 
-      <Flex className="gap-4 dark:text-gray-200">
+      <Flex className="gap-4 dark:text-gray-200 hidden lg:flex">
         <a href="#">
           <h1>{text.home}</h1>
         </a>
@@ -48,6 +48,10 @@ const Navbar = ({ theme, language }: PropsNavbar) => {
           <h1>{text.projects}</h1>
         </a>
       </Flex>
+
+      <Box className="block lg:hidden">
+        <MenuButton />
+      </Box>
     </Flex>
   );
 };

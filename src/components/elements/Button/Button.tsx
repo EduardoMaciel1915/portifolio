@@ -5,9 +5,9 @@ const Button: React.FC<componentsProps.IButton> = ({
   ...rest
 }) => {
   const defaultStyles = `
-    h-[3rem]
+    h-[2.5rem]
     flex justify-center items-center
-    px-8
+    px-5
     rounded-lg shadow-md
     transition duration-200 ease-in-out
     hover:bg-white hover:border-black hover:text-black
