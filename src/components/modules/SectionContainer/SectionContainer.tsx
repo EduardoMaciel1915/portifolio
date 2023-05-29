@@ -7,7 +7,7 @@ interface PropsSectionContainer {
 
 const SectionContainer = ({ children, id }: PropsSectionContainer) => {
   return (
-    <Box id={id} className="h-screen w-full py-20 max-w-screen-xl">
+    <Box id={id} className="h-screen w-full py-20 px-10 lg:px-0 max-w-screen-xl">
       {children}
     </Box>
   );

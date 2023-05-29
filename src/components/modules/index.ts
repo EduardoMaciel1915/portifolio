@@ -1,3 +1,4 @@
+export { default as MobileMenu } from './MobileMenu';
 export { default as Navbar } from './Navbar';
 export { default as PageLoading } from './PageLoading';
 export { default as SectionContainer } from './SectionContainer';

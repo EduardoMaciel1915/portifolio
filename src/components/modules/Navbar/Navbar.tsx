@@ -38,7 +38,8 @@ const Navbar = ({ theme, language }: PropsNavbar) => {
     <Flex
       className={`
         w-full h-16
-        justify-around items-center 
+        justify-between lg:justify-around items-center 
+        px-10 lg:px-0
         text-black
         ${hasBorder && 'border-b'} border-solid border-gray-100 dark:border-gray-700
         z-30 
