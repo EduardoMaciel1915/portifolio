@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, HTMLProps, InputHTMLAttributes } from 'react';
+import { InputHTMLAttributes } from 'react';
 
 interface IInput extends InputHTMLAttributes<HTMLInputElement> {
   children?: React.ReactNode;
