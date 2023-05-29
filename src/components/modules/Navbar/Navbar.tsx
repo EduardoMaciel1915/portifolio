@@ -24,7 +24,15 @@ const Navbar = ({ theme, language }: PropsNavbar) => {
     }
   };
 
-  window.addEventListener('scroll', changeBackground);
+  const smoothScroll = (event: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    event.preventDefault();
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  typeof window !== 'undefined' && window.addEventListener('scroll', changeBackground);
 
   return (
     <Flex
@@ -48,15 +56,15 @@ const Navbar = ({ theme, language }: PropsNavbar) => {
       </Flex>
 
       <Flex className="gap-4 dark:text-gray-200 hidden lg:flex">
-        <a href="#">
+        <a href="#home" onClick={event => smoothScroll(event, 'home')}>
           <h1>{text.home}</h1>
         </a>
 
-        <a href="#about">
+        <a href="#about" onClick={event => smoothScroll(event, 'about')}>
           <h1>{text.about}</h1>
         </a>
 
-        <a href="#projects">
+        <a href="#projects" onClick={event => smoothScroll(event, 'projects')}>
           <h1>{text.projects}</h1>
         </a>
       </Flex>
