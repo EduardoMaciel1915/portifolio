@@ -9,6 +9,13 @@ import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
+export const metadata = {
+  title: 'Portifólio | Eduardo Maciel',
+  icons: {
+    icon: '/icon/favicon.png',
+  },
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const { theme } = useTheme();
   const { language } = useLanguage();
@@ -18,7 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   }
 
   return (
-    <html lang="en" className={theme}>
+    <html lang="pt-BR" className={theme}>
       <body className={inter.className}>
         <Navbar {...{ theme, language }} />
 

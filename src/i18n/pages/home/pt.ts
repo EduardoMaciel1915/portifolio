@@ -11,6 +11,7 @@ export const ptHomeText = {
     `,
     secondDescription: `Meu foco está sempre em entregar resultados de alta qualidade, e sou capaz
     de liderar equipes e projetos com eficiência e dedicação.`,
+    skills: 'habilidades',
   },
   projects: {
     title: 'projetos pessoais',

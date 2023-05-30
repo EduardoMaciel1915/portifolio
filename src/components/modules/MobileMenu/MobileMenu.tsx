@@ -17,7 +17,7 @@ const MobileMenu = () => {
 
   return (
     <Box
-      className={`
+      className={` 
         ${handleWidth}
         h-screen 
         right-0

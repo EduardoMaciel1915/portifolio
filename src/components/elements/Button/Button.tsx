@@ -15,15 +15,15 @@ const Button: React.FC<componentsProps.IButton> = ({
   `;
 
   const buttonClassNamePrimary = `
-    text-white text-lg font-medium
-    bg-black
+    text-white dark:text-black text-lg font-medium
+    bg-black dark:bg-white
     border-solid border border-black
     ${defaultStyles}
   `;
 
   const buttonClassNameSecondary = `
-    text-gray-600 text-lg font-medium
-    bg-white
+    text-gray-600 dark:text-white text-lg font-medium
+    bg-white dark:bg-black
     border-solid border border-gray-400
     ${defaultStyles}
   `;

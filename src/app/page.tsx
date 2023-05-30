@@ -1,10 +1,19 @@
 'use client';
 
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import {
+  SiAngularjs,
+  SiCss3,
+  SiHtml5,
+  SiJavascript,
+  SiReact,
+  SiTypescript,
+} from 'react-icons/si';
 
 import {
   Box,
   Flex,
+  IcNextJs,
   MobileMenu,
   RenderCondition,
   SectionContainer,
@@ -29,6 +38,15 @@ export default function Home() {
     fill-gray-300 
     hover:fill-black 
     transition-all ease duration-200
+  `;
+
+  const defaultStyleIconsSkills = `
+    lg:w-16 lg:h-20 w-6 h-12
+    cursor-pointer 
+    fill-black
+    hover:fill-gray-600 
+    transition-all ease duration-200
+    hover:scale-110
   `;
 
   return (
@@ -68,15 +86,30 @@ export default function Home() {
               className={`
                 justify-center items-center
                 lg:flex-row
-                gap-10 mt-20
+                gap-10 mt-10 lg:mt-20
               `}
             >
-              <Box className="rounded-full w-40 h-40 bg-cover bg-center bg-[url('/img/eduardo-maciel.jpg')]" />
-              <Box className="w-full lg:w-1/2">
+              <Box className="rounded-full w-28 h-28 lg:w-40 lg:h-40 bg-cover bg-center bg-[url('/img/eduardo-maciel.jpg')]" />
+              <Box className="w-full lg:w-1/2 dark:text-white">
                 <p>{text.about.firstDescription}</p>
                 <p>{text.about.secondDescription}</p>
               </Box>
             </Box>
+
+            <Box className="text-center">
+              <h1 className="text-3xl font-bold dark:text-gray-200 mt-10 lg:mt-20">
+                {text.about.skills}
+              </h1>
+            </Box>
+            <Flex className="gap-4 lg:gap-8 w-full justify-center mt-5 lg:mt-10 flex-wrap">
+              <SiHtml5 className={defaultStyleIconsSkills} />
+              <SiCss3 className={defaultStyleIconsSkills} />
+              <SiJavascript className={defaultStyleIconsSkills} />
+              <SiTypescript className={defaultStyleIconsSkills} />
+              <SiReact className={defaultStyleIconsSkills} />
+              <SiAngularjs className={defaultStyleIconsSkills} />
+              <IcNextJs className={defaultStyleIconsSkills} />
+            </Flex>
           </SectionContainer>
 
           <SectionDivider />

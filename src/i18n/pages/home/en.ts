@@ -9,6 +9,7 @@ export const enHomeText = {
     with skills in DevOps using AWS.`,
     secondDescription: `My focus is always on delivering high-quality results, and I am capable 
     of leading teams and projects with efficiency and dedication.`,
+    skills: 'skills',
   },
   projects: {
     title: 'personal projects',
