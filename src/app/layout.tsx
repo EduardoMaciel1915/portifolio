@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation';
 import { Inter } from 'next/font/google';
 
-import { Navbar } from '@/components';
+import { Footer, Navbar } from '@/components';
 
 import { useLanguage, useTheme } from '@/hooks';
 
@@ -30,6 +30,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar {...{ theme, language }} />
 
         {children}
+
+        <Footer />
       </body>
     </html>
   );

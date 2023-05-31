@@ -11,6 +11,7 @@ import {
 import {
   ArrowDownNavigate,
   Box,
+  CardProduct,
   Flex,
   IcNextJs,
   SectionContainer,
@@ -40,6 +41,27 @@ export default function Home() {
     transition-all ease duration-200
     hover:scale-110
   `;
+
+  const productsList = [
+    {
+      title: 'Moveit',
+      github: 'https://github.com/EduardoMaciel1915/Moveit',
+      link: 'https://moveit-eduardomaciel1915.vercel.app/',
+      bgBanner: "bg-[url('/img/moveit.png')]",
+    },
+    {
+      title: 'Netflix (réplica)',
+      github: 'https://github.com/EduardoMaciel1915/Netlix',
+      link: 'https://netlix-replica-three.vercel.app/',
+      bgBanner: "bg-[url('/img/netflix.png')]",
+    },
+    {
+      title: 'Spotify (réplica)',
+      github: 'https://github.com/EduardoMaciel1915/Spotify',
+      link: 'https://spotify-sooty-rho.vercel.app/',
+      bgBanner: "bg-[url('/img/spotify.png')]",
+    },
+  ];
 
   return (
     <Box className="w-full items-center dark:bg-black">
@@ -89,7 +111,7 @@ export default function Home() {
           </Box>
         </Box>
 
-        <Flex className="gap-4 lg:gap-8 w-full justify-center mt-5 lg:mt-10 flex-wrap">
+        <Flex className="gap-4 lg:gap-8 w-full justify-center mt-5 lg:mt-20 flex-wrap">
           <SiHtml5 className={defaultStyleIconsSkills} />
           <SiCss3 className={defaultStyleIconsSkills} />
           <SiJavascript className={defaultStyleIconsSkills} />
@@ -105,7 +127,17 @@ export default function Home() {
       <SectionContainer id="projects">
         <SectionTitle title={text.projects.title} direction="right" />
 
-        <Box></Box>
+        <Flex className="mt-20 flex-wrap gap-10 w-full justify-center">
+          {productsList?.map(product => (
+            <CardProduct
+              key={product.title}
+              title={product.title}
+              github={product.github}
+              link={product.link}
+              bgBanner={product.bgBanner}
+            />
+          ))}
+        </Flex>
       </SectionContainer>
     </Box>
   );
